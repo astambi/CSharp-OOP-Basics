@@ -1,40 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 public class Person
 {
-    private string name;
-    private DateTime birthdate;
-    private List<FamilyMember> parents;
-    private List<FamilyMember> children;
+    private List<Person> children;
 
     public Person()
     {
-        this.parents = new List<FamilyMember>();
-        this.children = new List<FamilyMember>();
+        this.children = new List<Person>();
     }
 
-    public Person(string name) : this()
+    public Person(string name, string birthdate) : this()
     {
-        this.name = name;
-    }
-    public Person(DateTime birthdate) : this()
-    {
-        this.birthdate = birthdate;
-    }
-    public Person(string name, DateTime birthdate) : this(name)
-    {
-        this.birthdate = birthdate;
-    }
-    public string Name
-    {
-        get { return this.name; }
-        set { this.name = value; }
-    }
-    public DateTime Birthdate
-    {
-        get { return this.birthdate; }
-        set { this.birthdate = value; }
+        this.Name = name;
+        this.Birthdate = birthdate;
     }
 
+    public string Name { get; set; }
+    public string Birthdate { get; set; }
+
+    public IReadOnlyList<Person> Children => this.children.AsReadOnly();
+
+    public void AddChild(Person child)
+    {
+        this.children.Add(child);
+    }
+
+    public void AddChildrenInfo(string name, string birthdate)
+    {
+        if (this.children.FirstOrDefault(c => c.Name == name) != null)
+        {
+            this.children
+                .FirstOrDefault(c => c.Name == name)
+                .Birthdate = birthdate;
+            return;
+        }
+        if (this.children.FirstOrDefault(c => c.Birthdate == birthdate) != null)
+        {
+            this.children
+                .FirstOrDefault(c => c.Birthdate == birthdate)
+                .Name = name;
+        }
+    }
+
+    public Person FindChild(string childName)
+    {
+        return this.children.FirstOrDefault(c => c.Name == childName);
+    }
 }

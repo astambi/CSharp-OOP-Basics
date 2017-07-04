@@ -37,7 +37,6 @@ public class StartUp
     private static List<Rectangle> GetRectangles(List<int> input)
     {
         var rectangles = new List<Rectangle>();
-
         var numberOfRectangles = input[0];
         for (int i = 0; i < numberOfRectangles; i++)
         {
