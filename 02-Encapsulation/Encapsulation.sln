@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L01-Persons", "L01-Persons\L01-Persons.csproj", "{F2C963F0-6062-4228-82CE-0C1088C053CB}"
 EndProject
@@ -10,6 +10,18 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03-Validation", "L03-Validation\L03-Validation.csproj", "{BC47D5F6-B106-49EB-A9D1-53B2156C6934}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04-Team", "L04-Team\L04-Team.csproj", "{EF3D7DD7-07C9-4493-95E3-A997FC1A1316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E01-ClassBox", "E01-ClassBox\E01-ClassBox.csproj", "{F860C13A-81D6-457F-BF36-7ACBADB8A431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02-ClassBoxDataValidation", "E02-ClassBoxDataValidation\E02-ClassBoxDataValidation.csproj", "{F11F7FA1-5AE2-4E6E-B539-CF626CDAFCE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalFarm", "E03-AnimalFarm\AnimalFarm.csproj", "{32AEC171-3440-43ED-822B-E7F89C5A8651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E04-ShoppingSpree", "E04-ShoppingSpree\E04-ShoppingSpree.csproj", "{316B489C-C92B-4964-A3D0-60BA812FD188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E05-PizzaCalories", "E05-PizzaCalories\E05-PizzaCalories.csproj", "{65608289-8CE8-49BB-91C3-01AC8ECF5D9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E06-FootballTeamGenerator", "E06-FootballTeamGenerator\E06-FootballTeamGenerator.csproj", "{4F76CAA8-F2A9-4FB6-A716-ECE4084DDE06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +45,30 @@ Global
 		{EF3D7DD7-07C9-4493-95E3-A997FC1A1316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF3D7DD7-07C9-4493-95E3-A997FC1A1316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF3D7DD7-07C9-4493-95E3-A997FC1A1316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F860C13A-81D6-457F-BF36-7ACBADB8A431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F860C13A-81D6-457F-BF36-7ACBADB8A431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F860C13A-81D6-457F-BF36-7ACBADB8A431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F860C13A-81D6-457F-BF36-7ACBADB8A431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F11F7FA1-5AE2-4E6E-B539-CF626CDAFCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F11F7FA1-5AE2-4E6E-B539-CF626CDAFCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F11F7FA1-5AE2-4E6E-B539-CF626CDAFCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F11F7FA1-5AE2-4E6E-B539-CF626CDAFCE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32AEC171-3440-43ED-822B-E7F89C5A8651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AEC171-3440-43ED-822B-E7F89C5A8651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AEC171-3440-43ED-822B-E7F89C5A8651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AEC171-3440-43ED-822B-E7F89C5A8651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316B489C-C92B-4964-A3D0-60BA812FD188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316B489C-C92B-4964-A3D0-60BA812FD188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316B489C-C92B-4964-A3D0-60BA812FD188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316B489C-C92B-4964-A3D0-60BA812FD188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65608289-8CE8-49BB-91C3-01AC8ECF5D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65608289-8CE8-49BB-91C3-01AC8ECF5D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65608289-8CE8-49BB-91C3-01AC8ECF5D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65608289-8CE8-49BB-91C3-01AC8ECF5D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F76CAA8-F2A9-4FB6-A716-ECE4084DDE06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F76CAA8-F2A9-4FB6-A716-ECE4084DDE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F76CAA8-F2A9-4FB6-A716-ECE4084DDE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F76CAA8-F2A9-4FB6-A716-ECE4084DDE06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
