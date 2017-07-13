@@ -22,33 +22,38 @@ namespace E01_Vehicles
                 var vehicle = tokens[1].ToLower();
                 var distanceOrLiters = double.Parse(tokens[2]);
 
-                switch (command)
+                //switch (command)
+                //{
+                //    case "drive":
+                //        if (vehicle == "car")           car.Drive(distanceOrLiters);
+                //        else if (vehicle == "truck")    truck.Drive(distanceOrLiters);
+                //        break;
+                //    case "refuel":
+                //        if (vehicle == "car")           car.Fuel(distanceOrLiters);
+                //        else if (vehicle == "truck")    truck.Fuel(distanceOrLiters);
+                //        break;
+                //    default: break;
+                //};
+
+                switch (vehicle)
                 {
-                    case "drive":
-                        if (vehicle == "car")
-                        {
-                            car.Drive(distanceOrLiters);
-                        }
-                        else if (vehicle == "truck")
-                        {
-                            truck.Drive(distanceOrLiters);
-                        }
-                        break;
-                    case "refuel":
-                        if (vehicle == "car")
-                        {
-                            car.Fuel(distanceOrLiters);
-                        }
-                        else if (vehicle == "truck")
-                        {
-                            truck.Fuel(distanceOrLiters);
-                        }
-                        break;
+                    case "car":     ExecuteAction(car, command, distanceOrLiters); break;
+                    case "truck":   ExecuteAction(truck, command, distanceOrLiters); break;
                     default: break;
-                };
+                }
             }
             Console.WriteLine(car.ToString());
             Console.WriteLine(truck.ToString());
+        }
+
+        private static void ExecuteAction(Vehicle vehicle, string command, double distanceOrLiters)
+        {
+            switch (command)
+            {
+                case "drive":   vehicle.Drive(distanceOrLiters); break;
+                case "refuel":  vehicle.Refuel(distanceOrLiters); break;
+                default: break;
+            }
         }
     }
 }

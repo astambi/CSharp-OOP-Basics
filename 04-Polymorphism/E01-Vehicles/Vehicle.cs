@@ -2,27 +2,27 @@
 
 namespace E01_Vehicles
 {
-    public class Vehicle
+    public abstract class Vehicle
     {
         private double fuelQuantity;
         private double fuelConsumption;
 
-        public Vehicle(double fuelQuantity, double fuelConsumption)
+        protected Vehicle(double fuelQuantity, double fuelConsumption)
         {
             this.FuelQuantity = fuelQuantity;
             this.FuelConsumption = fuelConsumption;
         }
 
-        public double FuelQuantity
+        protected double FuelQuantity
         {
             get { return this.fuelQuantity; }
-            protected set { this.fuelQuantity = value; }
+            set { this.fuelQuantity = value; }
         }
 
-        public double FuelConsumption
+        protected double FuelConsumption
         {
             get { return this.fuelConsumption; }
-            protected set { this.fuelConsumption = value; }
+            set { this.fuelConsumption = value; }
         }
 
         public virtual void Drive(double distance)
@@ -38,7 +38,7 @@ namespace E01_Vehicles
             }
         }
 
-        public virtual void Fuel(double liters)
+        public virtual void Refuel(double liters)
         {
             this.fuelQuantity += liters;
         }

@@ -23,24 +23,14 @@ namespace E02_VehiclesExtension
                 var distanceOrLiters = double.Parse(tokens[2]);
 
                 try
-                {
-                    switch (command)
+                {                   
+                    switch (vehicle)
                     {
-                        case "drive":
-                            if (vehicle == "car")           car.Drive(distanceOrLiters);
-                            else if (vehicle == "truck")    truck.Drive(distanceOrLiters);
-                            else if (vehicle == "bus")      bus.DriveWithAC(distanceOrLiters);
-                            break;
-                        case "driveempty":
-                            if (vehicle == "bus")           bus.Drive(distanceOrLiters);
-                            break;
-                        case "refuel":
-                            if (vehicle == "car")           car.Fuel(distanceOrLiters);
-                            else if (vehicle == "truck")    truck.Fuel(distanceOrLiters);
-                            else if (vehicle == "bus")      bus.Fuel(distanceOrLiters);
-                            break;
+                        case "car":     ExecuteAction(car, command, distanceOrLiters); break;
+                        case "truck":   ExecuteAction(truck, command, distanceOrLiters); break;
+                        case "bus":     ExecuteAction(bus, command, distanceOrLiters); break;
                         default: break;
-                    };
+                    }
                 }
                 catch (Exception e)
                 {
@@ -50,6 +40,17 @@ namespace E02_VehiclesExtension
             Console.WriteLine(car.ToString());
             Console.WriteLine(truck.ToString());
             Console.WriteLine(bus.ToString());
+        }
+
+        private static void ExecuteAction(Vehicle vehicle, string command, double distanceOrLiters)
+        {
+            switch (command)
+            {
+                case "drive":       vehicle.Drive(distanceOrLiters); break;
+                case "refuel":      vehicle.Refuel(distanceOrLiters); break;
+                case "driveempty":  vehicle.Drive(distanceOrLiters, false); break; // AC off
+                default: break;
+            }
         }
     }
 }

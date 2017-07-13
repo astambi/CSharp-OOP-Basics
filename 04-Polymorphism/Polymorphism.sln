@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L01-MathOperation", "L01-MathOperation\L01-MathOperation.csproj", "{23E90A46-22E6-41B1-9167-229DED465D91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{C094B202-22E1-418D-8AC6-B9597260D591}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L02-Animals", "L02-Animals\L02-Animals.csproj", "{123D758C-A318-4346-A490-1ADB47AFD10C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03-Shapes", "L03-Shapes\L03-Shapes.csproj", "{6EA4B4A6-278C-4242-9B86-0D4EAAC7D00F}"
@@ -14,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E01-Vehicles", "E01-Vehicles\E01-Vehicles.csproj", "{548581F4-2F4D-4FCB-BE6A-C55BB31D9F6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02-VehiclesExtension", "E02-VehiclesExtension\E02-VehiclesExtension.csproj", "{38C4374F-1990-440B-914A-B612E160E316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E03-WildFarm", "E03-WildFarm\E03-WildFarm.csproj", "{C8112944-DD75-423C-B962-765574A21C2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		{23E90A46-22E6-41B1-9167-229DED465D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23E90A46-22E6-41B1-9167-229DED465D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23E90A46-22E6-41B1-9167-229DED465D91}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C094B202-22E1-418D-8AC6-B9597260D591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C094B202-22E1-418D-8AC6-B9597260D591}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C094B202-22E1-418D-8AC6-B9597260D591}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C094B202-22E1-418D-8AC6-B9597260D591}.Release|Any CPU.Build.0 = Release|Any CPU
 		{123D758C-A318-4346-A490-1ADB47AFD10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{123D758C-A318-4346-A490-1ADB47AFD10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{123D758C-A318-4346-A490-1ADB47AFD10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{38C4374F-1990-440B-914A-B612E160E316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38C4374F-1990-440B-914A-B612E160E316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38C4374F-1990-440B-914A-B612E160E316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8112944-DD75-423C-B962-765574A21C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8112944-DD75-423C-B962-765574A21C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8112944-DD75-423C-B962-765574A21C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8112944-DD75-423C-B962-765574A21C2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

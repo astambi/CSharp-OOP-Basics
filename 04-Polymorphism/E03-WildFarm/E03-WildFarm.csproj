@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{38C4374F-1990-440B-914A-B612E160E316}</ProjectGuid>
+    <ProjectGuid>{C8112944-DD75-423C-B962-765574A21C2A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>E02_VehiclesExtension</RootNamespace>
-    <AssemblyName>E02-VehiclesExtension</AssemblyName>
+    <RootNamespace>E03_WildFarm</RootNamespace>
+    <AssemblyName>E03-WildFarm</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Bus.cs" />
-    <Compile Include="Models\Car.cs" />
+    <Compile Include="Animals\Animal.cs" />
+    <Compile Include="Animals\Cat.cs" />
+    <Compile Include="Animals\Feline.cs" />
+    <Compile Include="Animals\Mouse.cs" />
+    <Compile Include="Animals\Tiger.cs" />
+    <Compile Include="Animals\Zebra.cs" />
+    <Compile Include="Foods\Food.cs" />
+    <Compile Include="Animals\Mammal.cs" />
+    <Compile Include="Foods\Meat.cs" />
+    <Compile Include="Foods\Vegetable.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Truck.cs" />
-    <Compile Include="Models\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

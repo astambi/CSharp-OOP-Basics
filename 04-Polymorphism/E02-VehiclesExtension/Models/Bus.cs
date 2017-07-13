@@ -11,12 +11,12 @@ namespace E02_VehiclesExtension
         {
         }
 
-        public override double FuelQuantity
+        protected override double FuelQuantity
         {
-            get { return base.FuelQuantity; }
-            protected set
+            //get { return base.FuelQuantity; }
+            set
             {
-                if (base.FuelQuantity > base.TankCapacity)
+                if (value > base.TankCapacity)
                 {
                     throw new ArgumentException("Cannot fit fuel in tank");
                 }
@@ -24,31 +24,23 @@ namespace E02_VehiclesExtension
             }
         }
 
-        public override void Fuel(double liters)
+        public override void Drive(double distance, bool hasAC)
         {
-            if (liters <= 0)
+            double totalFuelConsumption = base.FuelConsumption;
+            if (hasAC)
             {
-                throw new ArgumentException("Fuel must be a positive number");
+                totalFuelConsumption += fuelConsumptionIncreaseByAC;
             }
-            if (base.FuelQuantity + liters > base.TankCapacity)
-            {
-                throw new ArgumentException("Cannot fit fuel in tank");
-            }
-            base.FuelQuantity += liters;
-        }
 
-        public void DriveWithAC(double distance)
-        {
-            if (base.FuelQuantity < distance * (base.FuelConsumption + fuelConsumptionIncreaseByAC))
+            if (base.FuelQuantity < distance * totalFuelConsumption)
             {
                 Console.WriteLine($"{this.GetType().Name} needs refueling");
             }
             else
             {
-                base.FuelQuantity -= distance * (base.FuelConsumption + fuelConsumptionIncreaseByAC);
+                base.FuelQuantity -= distance * totalFuelConsumption;
                 Console.WriteLine($"{this.GetType().Name} travelled {distance} km");
             }
         }
-
     }
 }
