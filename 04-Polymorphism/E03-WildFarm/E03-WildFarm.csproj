@@ -48,6 +48,8 @@
     <Compile Include="Animals\Mouse.cs" />
     <Compile Include="Animals\Tiger.cs" />
     <Compile Include="Animals\Zebra.cs" />
+    <Compile Include="Factories\AnimalFactory.cs" />
+    <Compile Include="Factories\FoodFactory.cs" />
     <Compile Include="Foods\Food.cs" />
     <Compile Include="Animals\Mammal.cs" />
     <Compile Include="Foods\Meat.cs" />

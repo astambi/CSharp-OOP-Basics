@@ -1,4 +1,4 @@
-﻿namespace E03_WildFarm.Models
+﻿namespace E03_WildFarm.Foods
 {
     public class Meat : Food
     {
