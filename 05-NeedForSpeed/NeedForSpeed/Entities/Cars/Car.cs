@@ -19,7 +19,7 @@ public abstract class Car
     public int Horsepower { get; protected set; }
     public int Acceleration { get; /*private set; */}
     public int Suspension { get; protected set; }
-    public int Durability { get; /*private set;*/ }
+    public int Durability { get; set; }
 
     public virtual void Tune(int tuneIndex, string addOn)
     {

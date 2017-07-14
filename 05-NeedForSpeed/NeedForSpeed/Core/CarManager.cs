@@ -52,6 +52,20 @@ public class CarManager
         }
     }
 
+    public void Open(int id, string type, int length, string route, int prizePool, int specialParam)
+    {
+        switch (type)
+        {
+            case "Circuit":
+                this.races[id] = new CircuitRace(length, route, prizePool, specialParam);
+                break;
+            case "TimeLimit":
+                this.races[id] = new TimeLimitRace(length, route, prizePool, specialParam);
+                break;            
+            default: break;
+        }
+    }
+
     public void Participate(int carId, int raceId)
     {
         if (!this.garage.ParkedCars.Contains(carId) && 
@@ -72,7 +86,7 @@ public class CarManager
 
         if (!closedRaces.Contains(raceId))  // cannot start a closed race
         {
-            var result = races[raceId].GetRaceResult();
+            var result = races[raceId].ToString();
 
             // close race => 
             // racing cars would be able to park in the garage

@@ -51,7 +51,17 @@ public class Engine
                 int length = int.Parse(commandArgs[3]);
                 string route = commandArgs[4];
                 int prizePool = int.Parse(commandArgs[5]);
-                manager.Open(id, type, length, route, prizePool);
+
+                if (commandArgs.Length > 6)
+                {
+                    int specialParam = int.Parse(commandArgs[6]);
+                    manager.Open(id, type, length, route, prizePool, specialParam);
+                }
+                else
+                {
+                    manager.Open(id, type, length, route, prizePool);
+                }
+
                 break;
             case "participate":
                 var carId = int.Parse(commandArgs[1]);

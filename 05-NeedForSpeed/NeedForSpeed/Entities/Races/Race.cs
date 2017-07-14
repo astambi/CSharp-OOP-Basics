@@ -12,20 +12,20 @@ public abstract class Race
         this.Participants = new Dictionary<int, Car>();
     }
 
-    private int Length { get; /*set;*/ }
-    private string Route { get; /*set;*/ }
-    private int PrizePool { get; /*set;*/ }
+    protected int Length { get; /*set;*/ }
+    protected string Route { get; /*set;*/ }
+    protected int PrizePool { get; /*set;*/ }
 
     public Dictionary<int, Car> Participants { get; set; }
 
     public abstract int GetPerformance(int id);
 
-    public Dictionary<int, Car> GetWinners()
+    public virtual Dictionary<int, Car> GetWinners()
     {
         var winners = this.Participants
-                      .OrderByDescending(p => this.GetPerformance(p.Key))
-                      .Take(3)
-                      .ToDictionary(p => p.Key, p => p.Value);
+                          .OrderByDescending(p => this.GetPerformance(p.Key))
+                          .Take(3)
+                          .ToDictionary(p => p.Key, p => p.Value);
         return winners;
     }
 
@@ -42,7 +42,7 @@ public abstract class Race
         return prizes;
     }
 
-    public string GetRaceResult()
+    public override string ToString()
     {
         var winners = GetWinners();
         var prizes = GetPrizes();

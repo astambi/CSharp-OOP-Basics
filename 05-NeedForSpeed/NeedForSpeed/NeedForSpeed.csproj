@@ -49,9 +49,11 @@
     <Compile Include="Entities\Cars\ShowCar.cs" />
     <Compile Include="Entities\Garage.cs" />
     <Compile Include="Entities\Races\CasualRace.cs" />
+    <Compile Include="Entities\Races\CircuitRace.cs" />
     <Compile Include="Entities\Races\DragRace.cs" />
     <Compile Include="Entities\Races\DriftRace.cs" />
     <Compile Include="Entities\Races\Race.cs" />
+    <Compile Include="Entities\Races\TimeLimitRace.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
