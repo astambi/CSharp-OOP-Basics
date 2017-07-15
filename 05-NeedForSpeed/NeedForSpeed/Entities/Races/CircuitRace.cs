@@ -26,32 +26,6 @@ public class CircuitRace : Race
         return (this.PrizePool * prizePercentages[wonPlace]) / 100;
     }
 
-    public override string ToString()
-    {
-
-        var builder = new StringBuilder();
-        builder.AppendLine($"{this.Route} - {this.Length * this.Laps}");
-
-        if (this.Participants.Count > 0)
-        {
-            UpdateParticipantsDurability();
-            var winners = GetWinners();
-
-            for (int i = 0; i < winners.Count; i++)
-            {
-                var winner = winners.ElementAt(i);
-                var participantCarId = winner.Key;
-                var participantCar = winner.Value;
-                var performance = GetPerformance(participantCarId);
-
-                builder
-                    .AppendLine($"{i + 1}. {participantCar.Brand} {participantCar.Model} {performance}PP - ${GetPrize(i)}");
-            }
-        }
-
-        return builder.ToString().Trim();
-    }
-
     public override Dictionary<int, Car> GetWinners()
     {
         return this.Participants
@@ -65,5 +39,30 @@ public class CircuitRace : Race
         this.Participants
             .ToList()
             .ForEach(p => p.Value.Durability -= this.Laps * Length * Length);
+    }
+
+    public override string ToString()
+    {
+        var builder = new StringBuilder();
+        builder.AppendLine($"{this.Route} - {this.Length * this.Laps}");
+
+        if (this.Participants.Count > 0)
+        {
+            UpdateParticipantsDurability();
+            var winners = GetWinners();
+
+            for (int i = 0; i < winners.Count; i++)
+            {
+                var participant = winners.ElementAt(i);
+                var participantCarId = participant.Key;
+                var participantCar = participant.Value;
+                var performance = GetPerformance(participantCarId);
+
+                builder
+                    .AppendLine($"{i + 1}. {participantCar.Brand} {participantCar.Model} {performance}PP - ${GetPrize(i)}");
+            }
+        }
+
+        return builder.ToString().Trim();
     }
 }
