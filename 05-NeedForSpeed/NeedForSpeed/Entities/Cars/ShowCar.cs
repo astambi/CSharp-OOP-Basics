@@ -19,6 +19,7 @@ public class ShowCar : Car
     {
         var builder = new StringBuilder(base.ToString());
         builder.AppendLine($"{this.stars} *");
+
         return builder.ToString().Trim();
     }
 }

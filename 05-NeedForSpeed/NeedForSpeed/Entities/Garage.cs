@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class Garage
 {
@@ -8,7 +7,7 @@ public class Garage
         this.ParkedCars = new List<int>();
     }
 
-    public List<int> ParkedCars { get; private set; }
+    public List<int> ParkedCars { get; /*private set;*/ }
 
     public void AddCar(int carId)
     {

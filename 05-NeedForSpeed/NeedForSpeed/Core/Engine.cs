@@ -13,12 +13,22 @@ public class Engine
     {
         while (true)
         {
-            var command = Console.ReadLine();
-            if (command == "Cops Are Here") break;
+            string commandInput = ReadInput();
+            if (commandInput == "Cops Are Here") break;
 
-            var commandArgs = command.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var commandArgs = ParseInput(commandInput);
             ExecuteCommand(commandArgs);
         }
+    }
+
+    private static string ReadInput()
+    {
+        return Console.ReadLine();
+    }
+
+    private static string[] ParseInput(string command)
+    {
+        return command.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
     }
 
     public void ExecuteCommand(string[] commandArgs)
@@ -32,13 +42,14 @@ public class Engine
             case "register":
                 id = int.Parse(commandArgs[1]);
                 type = commandArgs[2];
-                string brand = commandArgs[3];
-                string model = commandArgs[4];
-                int yearOfProduction = int.Parse(commandArgs[5]);
-                int horsepower = int.Parse(commandArgs[6]);
-                int acceleration = int.Parse(commandArgs[7]);
-                int suspension = int.Parse(commandArgs[8]);
-                int durability = int.Parse(commandArgs[9]);
+                var brand = commandArgs[3];
+                var model = commandArgs[4];
+                var yearOfProduction = int.Parse(commandArgs[5]);
+                var horsepower = int.Parse(commandArgs[6]);
+                var acceleration = int.Parse(commandArgs[7]);
+                var suspension = int.Parse(commandArgs[8]);
+                var durability = int.Parse(commandArgs[9]);
+
                 manager.Register(id, type, brand, model, yearOfProduction, horsepower, acceleration, suspension, durability);
                 break;
             case "check":
