@@ -1,6 +1,4 @@
-﻿using System;
-
-public class EarthMonument : Monument
+﻿public class EarthMonument : Monument
 {
     public EarthMonument(string name, int earthAffinity)
         : base(name)
@@ -10,7 +8,7 @@ public class EarthMonument : Monument
 
     private int EarthAffinity { get; /*private set;*/ }
 
-    public override double GetMonumentBonus()
+    public override double GetAffinity()
     {
         return this.EarthAffinity;
     }

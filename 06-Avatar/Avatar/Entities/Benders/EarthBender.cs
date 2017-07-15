@@ -1,6 +1,4 @@
-﻿using System;
-
-public class EarthBender : Bender
+﻿public class EarthBender : Bender
 {
     public EarthBender(string name, int power, double groundSaturation) 
         : base(name, power)

@@ -1,6 +1,4 @@
-﻿using System;
-
-public class FireBender : Bender
+﻿public class FireBender : Bender
 {
     public FireBender(string name, int power, double heatAggression)
         : base(name, power)

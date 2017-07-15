@@ -7,7 +7,7 @@
 
     private string Name { get; /*private set;*/ }
 
-    public abstract double GetMonumentBonus();
+    public abstract double GetAffinity();
 
     public override string ToString()
     {

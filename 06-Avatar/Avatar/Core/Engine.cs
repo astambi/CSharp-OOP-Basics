@@ -60,8 +60,8 @@ public class Engine
     private List<string> ParseInput(string inputCommand)
     {
         return inputCommand
-                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .ToList();
+               .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+               .ToList();
     }
 
     private string ReadInput()
