@@ -14,15 +14,13 @@ namespace BashSoft
 
         public void StartReadingCommands()
         {
-            OutputWriter.WriteMessage($"{SessionData.currentPath}> ");
-            string input = Console.ReadLine();
-
-            while (input != endCommand)
+            while (true)
             {
-                this.interpreter.IntepredCommand(input);
                 OutputWriter.WriteMessage($"{SessionData.currentPath}> ");
-                input = Console.ReadLine();
-                input = input.Trim();
+                string input = Console.ReadLine().Trim();
+                if (input == endCommand) break;
+
+                this.interpreter.IntepredCommand(input);
             }
         }
     }
